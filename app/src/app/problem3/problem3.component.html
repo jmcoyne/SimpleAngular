@@ -1,0 +1,43 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-1'> &nbsp;</div>
+    <div class='col-11'>
+      <form (submit)='onSignInForm()' [formGroup] = 'signInForm' id='signInForm'>
+        <div class='form-group '>
+          <div class='mb-3'>
+            <label for='email' class='form-label'> <b>Email address</b></label>
+            <input type='text'
+                   formControlName='email_address'
+                   placeholder='Enter Username'
+                   name='email'
+                   id='email'
+                   class='form-control'
+                   required
+                   >
+          </div>
+          <div class='mb-3'>
+            <label for='password' class='form-label'><b>Password</b></label>
+            <input id='password'
+                   name='password'
+                   type = 'password'
+                   formControlName="password"
+                   placeholder='Enter Password'
+                   class='form-control'
+                   required />
+          </div>
+        </div>
+        <div class='mb-8 row text-center'>
+          <div class='mb-3  col-6 text-end'>
+            <button type='submit' class='signin-submit btn btn-wyebot'   [disabled]='signInForm.valid'>Sign In</button>
+          </div>
+
+
+        </div>
+
+
+      </form>
+
+      <div> Find the errors in this login form.  For any given valid email address, the password 'MyPassword' should pass.  </div>
+    </div>
+  </div>
+</div>
